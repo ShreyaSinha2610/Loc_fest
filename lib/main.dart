@@ -32,6 +32,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text("LOC_FEST", style: TextStyle(
+          color: pink,
+          fontWeight: FontWeight.w700,
+          fontSize: 30
+        ),),
+        centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
@@ -376,11 +382,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
                 SizedBox(height: 20,),
-                productsWidget("murti.jpg", "MURTIS FROM SHYAAM"),
+                productsWidget("murti.jpg", "MURTIS FROM SHYAAM", "Murtis of all Gods are available Everything used is completely Eco-Friendly"),
                 SizedBox(height: 20,),
-                productsWidget("flowers.jpg", "FLOWERS FROM AANCHAL"),
+                productsWidget("flowers.jpg", "FLOWERS FROM AANCHAL", "Flowers of all types available you can order in Bulk too!"),
                 SizedBox(height: 20,),
-                productsWidget("lantern.jpeg", "LANTERNS FROM SURYA"),
+                productsWidget("lantern.jpeg", "LANTERNS FROM SURYA", "Different types of Lanterns available in all colours and 5 different designs!"),
               ],
             ),
           ),
@@ -389,7 +395,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Row productsWidget(String img, String name) {
+  Row productsWidget(String img, String name, String description) {
     return Row(
       children: [
         Container(
@@ -418,8 +424,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Icon(Icons.star, size: 20, color: Colors.orange,),
                 ],
               ),
-              Text(
-                "Murtis of all gods available, made by using eco-friendly products",
+              Text("$description",
                 style: TextStyle(
                   fontSize: 12,
                 ),),
