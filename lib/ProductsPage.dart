@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:loc_fest/CartPage.dart';
 import 'package:loc_fest/Style.dart';
 class ProductsPage extends StatelessWidget {
   const ProductsPage({Key? key}) : super(key: key);
@@ -174,6 +175,53 @@ class _productsPageState extends State<productsPage> {
                 ],
               ),
             ),
+          ),
+          Positioned(
+            bottom: 30,
+            left: 0,
+            right: 0,
+            child: Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      InkWell(
+                        onTap: openCartPage,
+                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(25)),
+                            color: pink
+                          ),
+                          child: Center(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.add_shopping_cart, color: Colors.white, size: 18,),
+                                Text("CART", style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w700
+                                ),)
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.symmetric(horizontal: 45, vertical: 5),
+                        margin: EdgeInsets.symmetric(horizontal: 10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(bottomRight: Radius.circular(20), bottomLeft: Radius.circular(20)),
+                          color: pink.withOpacity(0.6)
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
           )
         ],
       ),
@@ -278,6 +326,10 @@ class _productsPageState extends State<productsPage> {
         )
       ],
     );
+  }
+  void openCartPage()
+  {
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>CartPage()));
   }
 }
 
