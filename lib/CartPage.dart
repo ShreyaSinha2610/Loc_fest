@@ -99,9 +99,10 @@ class _cartPageState extends State<cartPage> {
                       ],
                     ),
                     SizedBox(height: 15,),
-                    Text("Its been 20 years since i am making these Murtis. Its a lot of hardwork but my devotion for these Murtis help me!. People dont buy it instead they buy those not eco-friendly ones from the market! I will keep working hard just support me !", style: TextStyle(
-                      color: Colors.greenAccent,
-                      fontSize: 12,
+                    Text("It needs a lot of hardwork , I work day and night during these festive season as it is the only source of income for me and my family . It's only the devotion which always appreciate me to put a lot of effort so that I can also celebrate these seasons with my love ones!!", style: TextStyle(
+                      color: blue,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
                     ),)
 
                   ],
